@@ -1,0 +1,67 @@
+2019-10-28 15:37:49,141 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Starting OnlineTestManagementRestfulApplication on DESKTOP-CR3KAV0 with PID 13720 (C:\Users\piyus\git\Sprint5B\OnlineTestManagementRestful\target\classes started by Piyush in C:\Users\piyus\git\Sprint5B\OnlineTestManagementRestful)
+2019-10-28 15:37:49,284 DEBUG com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Running with Spring Boot v2.1.9.RELEASE, Spring v5.1.10.RELEASE
+2019-10-28 15:37:49,286 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] No active profile set, falling back to default profiles: default
+2019-10-28 15:37:58,891 INFO org.apache.catalina.core.StandardService [main] Starting service [Tomcat]
+2019-10-28 15:37:58,894 INFO org.apache.catalina.core.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-10-28 15:38:00,488 INFO org.apache.jasper.servlet.TldScanner [main] At least one JAR was scanned for TLDs yet contained no TLDs. Enable debug logging for this logger for a complete list of JARs that were scanned but no TLDs were found in them. Skipping unneeded JARs during scanning can improve startup time and JSP compilation time.
+2019-10-28 15:38:00,519 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [main] Initializing Spring embedded WebApplicationContext
+2019-10-28 15:38:01,326 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Starting...
+2019-10-28 15:38:02,900 INFO com.zaxxer.hikari.HikariDataSource [main] HikariPool-1 - Start completed.
+2019-10-28 15:38:03,336 INFO org.hibernate.jpa.internal.util.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [
+	name: default
+	...]
+2019-10-28 15:38:04,351 INFO org.hibernate.Version [main] HHH000412: Hibernate Core {5.3.12.Final}
+2019-10-28 15:38:04,382 INFO org.hibernate.cfg.Environment [main] HHH000206: hibernate.properties not found
+2019-10-28 15:38:05,176 INFO org.hibernate.annotations.common.Version [main] HCANN000001: Hibernate Commons Annotations {5.0.4.Final}
+2019-10-28 15:38:06,151 INFO org.hibernate.dialect.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.MySQL5Dialect
+2019-10-28 15:38:11,191 DEBUG com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [main] Filter 'jwtRequestFilter' configured for use
+2019-10-28 15:38:11,411 INFO org.hibernate.hql.internal.QueryTranslatorFactoryInitiator [main] HHH000397: Using ASTQueryTranslatorFactory
+2019-10-28 15:38:13,405 INFO com.cg.otm.OnlineTestManagementRestful.OnlineTestManagementRestfulApplication [main] Started OnlineTestManagementRestfulApplication in 27.007 seconds (JVM running for 29.314)
+2019-10-28 15:38:40,841 INFO org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/] [http-nio-9088-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-10-28 15:38:40,964 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-1] JWT Token does not begin with Bearer String
+2019-10-28 15:38:51,826 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-3] Entered Show User method
+2019-10-28 15:38:51,997 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-3] Users displayed successfully
+2019-10-28 15:39:43,453 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-4] Entered Show User method
+2019-10-28 15:39:43,467 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-4] Users displayed successfully
+2019-10-28 15:41:08,421 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-6] Entered Show User method
+2019-10-28 15:41:08,437 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-6] Users displayed successfully
+2019-10-28 15:41:13,729 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-7] Entered Show User method
+2019-10-28 15:41:13,745 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-7] Users displayed successfully
+2019-10-28 15:41:25,316 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-8] Entered Show User method
+2019-10-28 15:41:25,332 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-8] Users displayed successfully
+2019-10-28 15:49:24,446 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-10] Entered Show User method
+2019-10-28 15:49:24,459 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-10] Users displayed successfully
+2019-10-28 15:49:30,375 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-1] Entered Show User method
+2019-10-28 15:49:30,388 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-1] Users displayed successfully
+2019-10-28 15:49:36,147 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-2] Entered Show User method
+2019-10-28 15:49:36,162 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-2] Users displayed successfully
+2019-10-28 15:49:50,828 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-3] Entered Show User method
+2019-10-28 15:49:50,839 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-3] Users displayed successfully
+2019-10-28 15:49:55,607 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-4] Entered Show User method
+2019-10-28 15:49:55,622 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-4] Users displayed successfully
+2019-10-28 15:50:06,428 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-5] Entered Show User method
+2019-10-28 15:50:06,440 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-5] Users displayed successfully
+2019-10-28 15:50:54,624 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-6] Entered Show User method
+2019-10-28 15:50:54,635 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-6] Users displayed successfully
+2019-10-28 15:50:59,613 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-7] Entered Show User method
+2019-10-28 15:50:59,624 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-7] Users displayed successfully
+2019-10-28 15:51:05,337 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-8] Entered Show User method
+2019-10-28 15:51:05,349 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-8] Users displayed successfully
+2019-10-28 15:51:49,812 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-9] Entered Show User method
+2019-10-28 15:51:49,825 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-9] Users displayed successfully
+2019-10-28 15:51:59,837 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-10] Entered Show User method
+2019-10-28 15:51:59,850 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-10] Users displayed successfully
+2019-10-28 15:52:17,484 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-1] Entered Show User method
+2019-10-28 15:52:17,497 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-1] Users displayed successfully
+2019-10-28 15:55:29,943 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-3] JWT Token does not begin with Bearer String
+2019-10-28 15:55:43,180 WARN com.cg.otm.OnlineTestManagementRestful.config.JwtRequestFilter [http-nio-9088-exec-4] JWT Token does not begin with Bearer String
+2019-10-28 15:55:52,318 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-6] Entered Show User method
+2019-10-28 15:55:52,329 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-6] Users displayed successfully
+2019-10-28 15:58:21,520 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-8] Entered Show User method
+2019-10-28 15:58:21,531 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-8] Users displayed successfully
+2019-10-28 15:58:44,801 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-9] Entered Show User method
+2019-10-28 15:58:44,811 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-9] Users displayed successfully
+2019-10-28 15:58:54,450 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-10] Entered Show User method
+2019-10-28 15:58:54,461 INFO com.cg.otm.OnlineTestManagementRestful.controller.TestManagementController [http-nio-9088-exec-10] Users displayed successfully
+2019-10-28 15:59:31,510 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(3)-127.0.0.1] HikariPool-1 - Shutdown initiated...
+2019-10-28 15:59:31,523 INFO com.zaxxer.hikari.HikariDataSource [RMI TCP Connection(3)-127.0.0.1] HikariPool-1 - Shutdown completed.
