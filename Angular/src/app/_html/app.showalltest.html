@@ -58,7 +58,7 @@
           <h3 class="section-title">Tests</h3>
           <p class="section-description">Here is a list of all Tests</p>
         </div>
-        <table id = "list"  style="margin-left:auto;margin-right:auto; width: 50%;">
+        <!-- <table id = "list"  style="margin-left:auto;margin-right:auto; width: 50%;">
           <tr>
 			<th>Test Id</th>
 			<th>Test Name</th>
@@ -75,7 +75,13 @@
 			</tr>
       <pagination-controls (pageChange)="p = $event"></pagination-controls>
        
-        </table>
+        </table> -->
+        <div class="row">
+          <div class = "col-md-3 col-lg-3"></div>
+          <div class = "col-md-6 col-lg-6">
+            <ng2-smart-table [settings]="settings" [source] = "users"></ng2-smart-table> 
+          </div>
+        </div>
       </div>
     </section>
 

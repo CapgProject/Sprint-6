@@ -13,6 +13,28 @@ import { Router } from '@angular/router';
 export class ShowAllTestComponent implements OnInit{
     update:any;
     tests:any[]=[];
+    
+    
+    settings = {
+        columns: {
+          testId: {
+            title: 'testId'
+          },
+          testName: {
+            title: 'testName'
+          }
+        },
+        actions: {
+            delete: false,
+            add: false,
+            edit: false,
+            position: 'right'
+        },
+        pager:{
+            display:true,
+            perPage: 5
+        }
+      };
 
     constructor(private service:TestService, private router:Router){
     }
