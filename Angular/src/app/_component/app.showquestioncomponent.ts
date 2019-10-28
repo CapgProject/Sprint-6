@@ -11,6 +11,33 @@ export class ShowQuestion{
     questions:Question[];
     constructor(private service:QuestionService, private router:Router){}
 
+    settings = {
+        columns: {
+          questionId: {
+            title: 'Question Id'
+          },
+          questionTitle: {
+            title: 'Question Title'
+          },
+          questionOptions: {
+            title: 'Options'
+          },
+          questionMarks: {
+            title: 'Total Marks'
+          }
+        },
+        actions: {
+            delete: false,
+            add: false,
+            edit: false,
+            position: 'right'
+        },
+        pager:{
+            display:true,
+            perPage: 5
+        }
+      };
+
     ngOnInit(){
         if(sessionStorage.getItem("role")!= "admin"){
             this.router.navigate(['/error403'])

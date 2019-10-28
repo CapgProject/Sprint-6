@@ -85,27 +85,12 @@
         </form>   
       </div>
       <div class="container wow fadeInUp">
-        <table id = "list" align="justify-content-center" style="margin-left:auto;margin-right:auto; width: 50%;">
-          <tr>
-            <th>Question Id</th>
-            <th>Question Title</th>
-            <th>Option a</th>
-            <th>Option b</th>
-            <th>Option c</th>
-            <th>Option d</th>
-            <th>Total Marks</th>
-          </tr>
-          <tr *ngFor="let question of questions | paginate: { itemsPerPage:5, currentPage: p}">
-              <td>{{question.questionId}}</td>
-              <td>{{question.questionTitle}}</td>
-              <td>{{question.questionOptions[0]}}</td>
-              <td>{{question.questionOptions[1]}}</td>
-              <td>{{question.questionOptions[2]}}</td>
-              <td>{{question.questionOptions[3]}}</td>
-              <td>{{question.questionMarks}}</td>
-          </tr>
-          <pagination-controls (pageChange)="p = $event" style="width: 100%;"></pagination-controls>
-        </table>
+        <div class="row">
+          <div class = "col-md-3 col-lg-3"></div>
+          <div class = "col-md-6 col-lg-6">
+            <ng2-smart-table [settings]="settings" [source] = "questions"></ng2-smart-table> 
+          </div>
+        </div>
       </div>
     </section>
         
