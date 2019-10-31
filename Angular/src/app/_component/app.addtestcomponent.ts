@@ -64,6 +64,10 @@ export class AddTestComponent implements OnInit {
       var startdate=Date.parse(this.model.startTime);
       var enddate=Date.parse(this.model.endTime);
       var currentdate=new Date().getTime();
+      var minDate=(this.model.startdate).getFullYear();
+      var maxDate=minDate+1;
+    
+
      
         if(this.model.endTime==null){
           this.endTimeError="End Time cannot be empty"
@@ -77,6 +81,11 @@ export class AddTestComponent implements OnInit {
           else{
             if(currentdate>enddate){
               this.endTimeError="End time cannot be in the past!"
+              return false;
+            }
+            else 
+              if(enddate>maxDate){
+              this.endTimeError="Test cannot be assigned for more than one year!"
               return false;
             }
             else{
