@@ -70,7 +70,7 @@ export class AddTestComponent implements OnInit {
 
      
         if(this.model.endTime==null){
-          this.endTimeError="End Time cannot be empty"
+          this.endTimeError="End Time cannot be empty!"
           return false;
         }
         else{

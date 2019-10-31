@@ -22,6 +22,15 @@ export class ShowAllTestComponent implements OnInit{
           },
           testName: {
             title: 'testName'
+          },
+          testDuration: {
+              title: 'testDuration'
+          },
+          startTime: {
+              title: 'startTime'
+          },
+          endTime: {
+              title: 'endTime'
           }
         },
         actions: {

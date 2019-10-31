@@ -58,28 +58,11 @@
           <h3 class="section-title">Tests</h3>
           <p class="section-description">Here is a list of all Tests</p>
         </div>
-        <!-- <table id = "list"  style="margin-left:auto;margin-right:auto; width: 50%;">
-          <tr>
-			<th>Test Id</th>
-			<th>Test Name</th>
-			<th>Test Duration</th>
-			<th>Test Start Time</th>
-			<th>Test End Time</th>
-          </tr>
-            <tr *ngFor="let test of tests | paginate: { itemsPerPage:5, currentPage: p}">
-				<td>{{test.testId}}</td>
-				<td>{{test.testName}}</td>
-				<td>{{test.testDuration}}</td>
-				<td>{{test.startTime}}</td>
-				<td>{{test.endTime}}</td>
-			</tr>
-      <pagination-controls (pageChange)="p = $event"></pagination-controls>
        
-        </table> -->
         <div class="row">
           <div class = "col-md-3 col-lg-3"></div>
           <div class = "col-md-6 col-lg-6">
-            <ng2-smart-table [settings]="settings" [source] = "users"></ng2-smart-table> 
+            <ng2-smart-table [settings]="settings" [source] = "tests"></ng2-smart-table> 
           </div>
         </div>
       </div>
