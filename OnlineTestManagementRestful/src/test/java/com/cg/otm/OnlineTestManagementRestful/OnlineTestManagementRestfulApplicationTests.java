@@ -75,25 +75,10 @@ public class OnlineTestManagementRestfulApplicationTests {
 	}
 	
 	
-	
-	
-	@Test
-	public void testShowUsersUrl() {
-	List<User> userList=restTemplate.getForObject("/showusers",List.class);
-	assertThat(userList);
-		
-	}
-	
 	@Test
 	public void testShowTestsUrl() {
 		List<OnlineTest> testList= restTemplate.getForObject("/showalltests", List.class);
 		assertThat(testList);
-	}
-	
-	@Test
-	public void testShowQuestionsUrl() {
-	List<Question> questionList= restTemplate.getForObject("/listquestionsubmit", List.class);
-	assertThat(questionList);
 	}
 	
 	@Test
@@ -107,12 +92,9 @@ public class OnlineTestManagementRestfulApplicationTests {
 		assertEquals(0, onlineTestService.getTests().size());
 	}
 	
-	
-	
-	
 	@Test
 	public void registerUserUnitTest() throws UserException  {
-		User addedUser = new User(null, "Priya Tiwary", "Priya@1234", null, new Boolean(false));
+		User addedUser = new User(null, "Priya Tiwary", "Priya@123", null, new Boolean(false));
 		User registeredUser = onlineTestService.registerUser(addedUser);
 		assertEquals(registeredUser, onlineTestService.searchUser(addedUser.getUserId()));
 	}
@@ -133,15 +115,15 @@ public class OnlineTestManagementRestfulApplicationTests {
 	
 	@Test
 	public void searchTestUnitTest() throws UserException {
-	assertEquals("C Programming", onlineTestService.searchTest(Long.valueOf(3)).getTestName());
+	assertEquals("Java", onlineTestService.searchTest(Long.valueOf(2)).getTestName());
 	}
 	@Test
 	public void searchUserUnitTest() throws UserException {
-	assertEquals("Priya Tiwary", onlineTestService.searchUser(Long.valueOf(10)).getUserName());
+	assertEquals("Nidhi Sinha", onlineTestService.searchUser(Long.valueOf(3)).getUserName());
 	}
 	@Test
 	public void searchQuestiontUnitTest() throws UserException {
-	assertEquals("Programming", onlineTestService.searchQuestion(Long.valueOf(1)).getQuestionTitle());
+	assertEquals("C", onlineTestService.searchQuestion(Long.valueOf(1)).getQuestionTitle());
 	}
 	
 }
