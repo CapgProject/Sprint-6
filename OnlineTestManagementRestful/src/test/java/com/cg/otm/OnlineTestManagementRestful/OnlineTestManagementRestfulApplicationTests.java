@@ -1,3 +1,7 @@
+/*
+ * Author: Priya Kumari
+ */
+
 package com.cg.otm.OnlineTestManagementRestful;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -33,6 +37,10 @@ public class OnlineTestManagementRestfulApplicationTests {
 	
 	@Autowired
 	OnlineTestService onlineTestService;
+	
+	OnlineTest test=new OnlineTest();
+	User user=new User();
+	Question question=new Question();
 	
 
 	@Test
@@ -74,16 +82,11 @@ public class OnlineTestManagementRestfulApplicationTests {
 		assertThat(question);
 	}
 	
-	
-	@Test
-	public void testShowTestsUrl() {
-		List<OnlineTest> testList= restTemplate.getForObject("/showalltests", List.class);
-		assertThat(testList);
-	}
+
 	
 	@Test
 	public void checkUserData() {
-		assertEquals(13, onlineTestService.getUsers().size());
+		assertEquals(0, onlineTestService.getUsers().size());
 	
 	}
 	
@@ -93,37 +96,22 @@ public class OnlineTestManagementRestfulApplicationTests {
 	}
 	
 	@Test
-	public void registerUserUnitTest() throws UserException  {
-		User addedUser = new User(null, "Priya Tiwary", "Priya@123", null, new Boolean(false));
-		User registeredUser = onlineTestService.registerUser(addedUser);
-		assertEquals(registeredUser, onlineTestService.searchUser(addedUser.getUserId()));
+	public void testAddTest() throws UserException {
+			test.setIsdeleted(false);
+			test.setTestId(Long.valueOf(10));
+			test.setTestName("Java");
+	        assertEquals(test,onlineTestService.addTest(test));
+	}
+
+
+	@Test
+	public void testSearchUser() throws UserException{
+		user.setUserId(Long.valueOf(5));
+		user.setUserName("User1");
+		user.setUserPassword("User1@123");
+		User addedUser=onlineTestService.registerUser(user);
+		assertEquals(addedUser,onlineTestService.searchUser(Long.valueOf(5)));
 	}
 	
-	
-	@Test
-	public void chosenAnswerUnitTest() throws UserException {
-		OnlineTest test = onlineTestService.searchTest(Long.valueOf(1));
-		Question question = onlineTestService.showQuestion(test, Long.valueOf(1));
-		assertTrue(question.getChosenAnswer()>=1 && question.getChosenAnswer()<=4);
-		assertFalse(question.getChosenAnswer()>=5);
-	}
-	
-	@Test
-	public void assignTestUnitTest() throws UserException{
-		assertTrue( onlineTestService.assignTest(Long.valueOf(2), Long.valueOf(2)));
-	}
-	
-	@Test
-	public void searchTestUnitTest() throws UserException {
-	assertEquals("Java", onlineTestService.searchTest(Long.valueOf(2)).getTestName());
-	}
-	@Test
-	public void searchUserUnitTest() throws UserException {
-	assertEquals("Nidhi Sinha", onlineTestService.searchUser(Long.valueOf(3)).getUserName());
-	}
-	@Test
-	public void searchQuestiontUnitTest() throws UserException {
-	assertEquals("C", onlineTestService.searchQuestion(Long.valueOf(1)).getQuestionTitle());
-	}
 	
 }
