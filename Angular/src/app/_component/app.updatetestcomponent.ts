@@ -49,12 +49,18 @@ export class UpdateTestComponent implements OnInit {
     }
     startTimeError="";
     validateStartTime():boolean{
+      var startdate=Date.parse(this.test.startTime);
+      var currentdate=new Date().getTime();
      
         if(this.test.startTime==null){
         this.startTimeError="Start Time cannot be empty."
         this.endTimeError=""
         return false;
         
+      }
+      else if(currentdate>startdate){
+        this.endTimeError="Start time cannot be in the past!"
+        return false;
       }
       else{
         this.startTimeError="";
@@ -65,6 +71,7 @@ export class UpdateTestComponent implements OnInit {
     endTimeError="";
     validateEndTime():boolean{
       var startdate=Date.parse(this.test.startTime);
+      var startDateMs=startdate + 365*24*60*60*1000
       var enddate=Date.parse(this.test.endTime);
      
         if(this.test.endTime==null){
@@ -75,6 +82,10 @@ export class UpdateTestComponent implements OnInit {
         this.endTimeError="End time cannot be before Start Time!"
         return false;
 
+      }
+      else if(enddate>startDateMs){
+        this.endTimeError="Test cannot be assigned for more than one year!"
+        return false;
       }
       
       else{

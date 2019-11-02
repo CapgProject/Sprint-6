@@ -64,7 +64,7 @@
 					<div class="text-center col-md-6 col-lg-6">Enter the Test
 						Duration:</div>
 					<div class="col-md-4 col-lg-4">
-						<input type="text" class="form-control" name="testDuration" [(ngModel)]="model.testDuration" 
+						<input type="text" class="form-control" name="testDuration" max="02:00:00"[(ngModel)]="model.testDuration" 
 							[ngModelOptions]="{standalone: true}" path="testDuration" placeholder="(HH:MM:SS)"
 							id="duration" (focusout)="validateTestDuration()"  />
 							
@@ -96,7 +96,7 @@
 					<div class="col-md-4 col-lg-4">
 						<input type="datetime-local" class="form-control" name="endTime"
 						[(ngModel)]="model.endTime" 
-						[ngModelOptions]="{standalone: true}" path="endTime" id="endTime" max="2019-12-31T23:59:59"  (focusout)="validateEndTime()"/>
+						[ngModelOptions]="{standalone: true}" path="endTime" id="endTime"   (focusout)="validateEndTime()"/>
 						<span *ngIf ="endTimeError!=null" class="error" style="color: red">{{endTimeError}}</span>
 
 					</div>

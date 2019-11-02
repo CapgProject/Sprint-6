@@ -48,11 +48,18 @@ export class AddTestComponent implements OnInit {
     }
     startTimeError="";
     validateStartTime():boolean{
+      var startdate=Date.parse(this.model.startTime);
+      var currentdate=new Date().getTime();
         if(this.model.startTime==null){
           this.startTimeError="Start Time cannot be empty."
           return false;
         
       }
+      else if(currentdate>startdate){
+        this.endTimeError="Start time cannot be in the past!"
+        return false;
+      }
+      
       else{
         this.startTimeError="";
         return true;
@@ -62,29 +69,24 @@ export class AddTestComponent implements OnInit {
     endTimeError="";
     validateEndTime():boolean{
       var startdate=Date.parse(this.model.startTime);
+      var startDateMs=startdate + 365*24*60*60*1000
       var enddate=Date.parse(this.model.endTime);
       var currentdate=new Date().getTime();
-      var minDate=(this.model.startdate).getFullYear();
-      var maxDate=minDate+1;
-    
-
-     
-        if(this.model.endTime==null){
+      if(this.model.endTime==null){
           this.endTimeError="End Time cannot be empty!"
           return false;
         }
-        else{
-          if(startdate>enddate){
+        else if(startdate>enddate){
             this.endTimeError="End time cannot be before Start Time!"
             return false;
           }
-          else{
-            if(currentdate>enddate){
+          else if(currentdate>enddate){
               this.endTimeError="End time cannot be in the past!"
               return false;
             }
-            else 
-              if(enddate>maxDate){
+            else if(enddate>startDateMs){
+              console.log(startDateMs)
+              console.log(enddate)
               this.endTimeError="Test cannot be assigned for more than one year!"
               return false;
             }
@@ -92,11 +94,11 @@ export class AddTestComponent implements OnInit {
               this.endTimeError="";
               return true;
             }
-          } 
+           
 
       }
 
-    } 
+    
    
 
     addTest():any{
