@@ -25,7 +25,7 @@ export class AddTestComponent implements OnInit {
     validateTestName(){
       var name = new RegExp(/^[A-Z][A-Za-z 0-9]{3,20}$/);
       if(!name.test(this.model.testName)){
-        this.nameError = "First Letter should be capital with 3-20 characters"
+        this.nameError = "First Letter should be capital with 3-20 characters!"
         return false;
     }
     else{
@@ -35,10 +35,16 @@ export class AddTestComponent implements OnInit {
     }
     durationError="";
     validateTestDuration():boolean{
+      var durationMax="03:00:00"
       var pattern = new RegExp(/^([0-9][0-9]):([0-5][0-9]):([0-5][0-9])$/i);
       if(!pattern.test(this.model.testDuration)){
         this.durationError="Enter duration in 'HH:mm:ss' format only!"
         return  false;
+      }
+      else if(this.model.testDuration>durationMax){
+        this.durationError="Duration of the test cannot be more than 3 hours!"
+        return false;
+
       }
       else{
         this.durationError="";
@@ -51,12 +57,12 @@ export class AddTestComponent implements OnInit {
       var startdate=Date.parse(this.model.startTime);
       var currentdate=new Date().getTime();
         if(this.model.startTime==null){
-          this.startTimeError="Start Time cannot be empty."
+          this.startTimeError="Start Time cannot be empty!"
           return false;
         
       }
       else if(currentdate>startdate){
-        this.endTimeError="Start time cannot be in the past!"
+        this.startTimeError="Start time cannot be in the past!"
         return false;
       }
       
@@ -85,8 +91,7 @@ export class AddTestComponent implements OnInit {
               return false;
             }
             else if(enddate>startDateMs){
-              console.log(startDateMs)
-              console.log(enddate)
+              
               this.endTimeError="Test cannot be assigned for more than one year!"
               return false;
             }

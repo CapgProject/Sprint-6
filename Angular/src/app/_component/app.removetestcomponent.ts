@@ -23,9 +23,7 @@ export class RemoveTestComponent {
             this.router.navigate(['/error403'])
         }
     }
-    // ngOnInit():void{
-    //     this.service.showAllTests().subscribe((data:Test[])=>this.testList=data);
-    // }
+   
     deleteTest(testId:any):any{
 
         
